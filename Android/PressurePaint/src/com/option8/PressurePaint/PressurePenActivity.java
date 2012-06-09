@@ -116,8 +116,7 @@ public class PressurePenActivity extends Activity
 //       	 you need to add the following line to the manifest for this to work
 //       	 <uses-permission android:name="android.permission.RECORD_AUDIO"/>
        	 recorder = new MediaRecorder();
- //      	 recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-       	 recorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
+       	 recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
        	 recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
        	 recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
        	 recorder.setOutputFile("/dev/null"); 
