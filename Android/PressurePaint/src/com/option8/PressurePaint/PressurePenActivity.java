@@ -131,7 +131,12 @@ public class PressurePenActivity extends Activity
         scheduler = Executors.newScheduledThreadPool(1);
         final Runnable beeper = new Runnable() {
         	public void run() {
-        		float tempVolumeLevel = recorder.getMaxAmplitude();
+        		
+        		// from Kindle Fire:
+        		// min level ~1000
+        		// max level ~21000
+        		
+        		float tempVolumeLevel = (recorder.getMaxAmplitude() - 1000)/200 ; // ~0 - 100
         		//float tempVolumeLevel = recorder.getMaxAmplitude()/328;
 				float maxPenPressurePercent = 65;
 				final float multiplier = maxPenPressurePercent / 100;
