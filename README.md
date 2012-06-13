@@ -9,3 +9,8 @@ For more information about PressurePen and how to obtain one for testing, please
 
 http://pressurepen.net
 http://facebook.com/pressurepen
+
+
+iOS version based on GLPaint by Apple:
+http://developer.apple.com/library/ios/#samplecode/GLPaint/Introduction/Intro.html
+
