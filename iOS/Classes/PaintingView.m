@@ -314,7 +314,6 @@
 	// count = MAX(ceilf(sqrtf((end.x - start.x) * (end.x - start.x) + (end.y - start.y) * (end.y - start.y)) / kBrushPixelStep), 1);
 	
     // We want a constant brush density of 1, only changing the radius with pressure
-    // count = ceilf(brushFactor * vertexMax);
     count = ceilf(vertexMax / 2);
     
     for(i = 0; i < count; ++i) {
@@ -329,7 +328,6 @@
 	}
 	
     // Change the brush size according to pressure value
-//    glPointSize(brushImageWidth * brushFactor);
     glPointSize(brushImageWidth * brushFactor);
     
 	// Render the vertex array
@@ -390,7 +388,7 @@
 		previousLocation.y = bounds.size.height - previousLocation.y;
 	}
     
-    // Check the adapter for pressure factor
+// Check the adapter for pressure factor
     Float32 levels;
     Float32 peaks;
     [self.pressure getAudioLevels:&levels peakLevels:&peaks];
@@ -420,25 +418,26 @@
 	// Render the stroke
     
     if([pressure isPossiblyConnected]) {
-    Float32 lowThreshold;
-    Float32 highThreshold;
-    Float32 maxBrushSize;
-    Float32 minBrushSize;
-
-    lowThreshold = .0;
-
-   // ios4/5 measure sound level differently?     
-    highThreshold = .17;
-    maxBrushSize = [maxBrushSizeSlider value];
-    minBrushSize = [minBrushSizeSlider value];
-    
-    Float32 adjustedLevels;
-    
-    adjustedLevels = (levels + (minBrushSize - MIN(lowThreshold, levels) ) ) * ( maxBrushSize / (highThreshold - lowThreshold)); 
-    NSLog(@"adjustedLevel: %f", adjustedLevels);
-    
-	[self renderLineFromPoint:previousLocation toPoint:location withBrushSize:adjustedLevels];
-    } else {
+		Float32 lowThreshold;
+		Float32 highThreshold;
+		Float32 maxBrushSize;
+		Float32 minBrushSize;
+	
+		lowThreshold = .0;
+	
+	   // ios4/5 measure sound level differently?     
+		highThreshold = .17;
+		maxBrushSize = [maxBrushSizeSlider value];
+		minBrushSize = [minBrushSizeSlider value];
+		
+		Float32 adjustedLevels;
+		
+		adjustedLevels = (levels + (minBrushSize - MIN(lowThreshold, levels) ) ) * ( maxBrushSize / (highThreshold - lowThreshold)); 
+		NSLog(@"adjustedLevel: %f", adjustedLevels);
+		
+		// render the point/line with adjusted width, based on pressure, min and max sizes.
+		[self renderLineFromPoint:previousLocation toPoint:location withBrushSize:adjustedLevels];
+    } else { // no mic/stylus detected
         [self renderLineFromPoint:previousLocation toPoint:location withBrushSize:1];
     }
 }

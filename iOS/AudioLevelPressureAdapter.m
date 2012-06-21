@@ -31,10 +31,11 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
 //    NSLog(@"Callback");
     
     // Monitor the levels on input
-    if(inNumPackets > 0)
+/*    if(inNumPackets > 0)
     {
-//        NSLog(@"Detected source, sample levels");
+        NSLog(@"Detected source, sample levels");
     }
+*/
     
     // Reset the buffer and prepare for next packet
     if([adapter isRunning])

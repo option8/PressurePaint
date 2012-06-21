@@ -86,9 +86,12 @@
 	Boolean needsErase;
     
     size_t brushImageWidth, brushImageHeight;
-    
+
+
+// AudioLevelPressureAdapter provides "pressure" variable
     AudioLevelPressureAdapter *pressure;
     
+// sliders set minimum and maximum factors for scaling brush in paintingview.m
     UISlider *minBrushSizeSlider;
     UISlider *maxBrushSizeSlider;
 }
