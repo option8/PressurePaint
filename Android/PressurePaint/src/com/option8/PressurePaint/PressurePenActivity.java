@@ -131,16 +131,11 @@ public class PressurePenActivity extends Activity
         scheduler = Executors.newScheduledThreadPool(1);
         final Runnable beeper = new Runnable() {
         	public void run() {
-        		
-        		// from Kindle Fire:
-        		// min level ~1000
-        		// max level ~21000
-        		
-        		float tempVolumeLevel = (recorder.getMaxAmplitude() - 1000)/200 ; // ~0 - 100
-        		//float tempVolumeLevel = recorder.getMaxAmplitude()/328;
-				float maxPenPressurePercent = 65;
+        		float tempVolumeLevel = recorder.getMaxAmplitude()/328;
+				float maxPenPressurePercent = 100;
 				final float multiplier = maxPenPressurePercent / 100;
 				final int volumePercent = (int) (tempVolumeLevel * multiplier);
+				//Log.i("Chad test volumePercent = ", ""+volumePercent);
 				if (recorder != null){
 					getWindow().getDecorView().findViewById(android.R.id.content).
 					post(new Runnable() {
@@ -193,7 +188,9 @@ public class PressurePenActivity extends Activity
 				maxWidthPercent / 100);
 		width = relativeMinWidth + (relativeMaxWidth - relativeMinWidth) *
 				volumePercent / 100;
-		mPaint.setStrokeWidth(width);
+		//mPaint.setStrokeWidth(width);
+		float vol = volumePercent;
+		mPaint.setStrokeWidth(vol);
 	}
 
 	private void getPrefs() {
