@@ -156,7 +156,7 @@ public class PressurePenActivity extends Activity
 						debugTextView.post(new Runnable() {
 							@Override
 							public void run() {
-								if (volumePercent != 0){
+								if (volumePercent >= 0){
 									debugTextView.setText(String.valueOf(volumePercent));
 								}
 //									debugTextView.setText(String.valueOf(testNumberMethod()));
@@ -193,7 +193,9 @@ public class PressurePenActivity extends Activity
 				maxWidthPercent / 100);
 		width = relativeMinWidth + (relativeMaxWidth - relativeMinWidth) *
 				volumePercent / 100;
-		mPaint.setStrokeWidth(width);
+		//mPaint.setStrokeWidth(width);
+		float vol = volumePercent;
+		mPaint.setStrokeWidth(vol);
 	}
 
 	private void getPrefs() {
