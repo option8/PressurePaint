@@ -146,7 +146,7 @@ public class PressurePenActivity extends Activity
 					post(new Runnable() {
 						@Override
 						public void run() {
-							if (volumePercent != 0){
+							if (volumePercent >= 0){
 								setStrokeWidthAccordingly(volumePercent);
 							}
 						}
