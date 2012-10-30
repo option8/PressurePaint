@@ -18,6 +18,7 @@
 
 package com.option8.PressurePaint;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -35,6 +36,10 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.MediaRecorder;
 import android.os.Bundle;
@@ -45,10 +50,13 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PressurePenActivity extends Activity
-        implements ColorPickerDialog.OnColorChangedListener {
+        implements ColorPickerDialog.OnColorChangedListener, SensorEventListener  {
 	
+	private SensorManager sensorManager;
+	private long lastUpdate;
 	private static MediaRecorder recorder = null;
 	protected static int maxWidthPercent;
 	protected static int minWidthPercent;
@@ -58,7 +66,8 @@ public class PressurePenActivity extends Activity
 	private ScheduledExecutorService scheduler;
 	private BroadcastReceiver receiver;
 	public static final String PREFS_NAME = "MyPrefsFile";
-
+	private String TAG = "PressurePenActivity";
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,17 +84,21 @@ public class PressurePenActivity extends Activity
         
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_HEADSET_PLUG);
-
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        
         receiver = new BroadcastReceiver() {
           @Override
           public void onReceive(Context context, Intent intent) {
         	  if (intent.getIntExtra("state", -1) == 0){
         		  //state 0 = unplugged
+        		  Log.i(TAG,"state = 0");
         			scheduler.shutdown();
         			try {
         				if (scheduler.awaitTermination(500, TimeUnit.MILLISECONDS)){			
         			        if (recorder != null) {
+        			        	Log.i(TAG,"Before recorder.stop()" );
         			        	recorder.stop();
+        			        	Log.i(TAG,"After recorder.stop()" );
         			        	recorder.release();
         			        	recorder = null;
         			        }
@@ -95,11 +108,15 @@ public class PressurePenActivity extends Activity
         		  mPaint.setStrokeWidth(5);
         	  }
         	  else{
+        		  Log.i(TAG,"state = 1?, actually equals - "+intent.getIntExtra("state", -1) );
+        		  Log.i(TAG,"name = ?, actually equals - "+intent.getStringExtra("name") );
+        		  Log.i(TAG,"microphone = 1?, actually equals - "+intent.getIntExtra("microphone", -1) );
+        		  getPrefs();
         		  initPressurePen();
         	  }
           }
         };
-
+        Log.i(TAG,"before registerReceiver");
         registerReceiver(receiver, filter);
 
     }   
@@ -107,6 +124,9 @@ public class PressurePenActivity extends Activity
 	@Override
 	protected void onResume() {
 		super.onResume();
+		sensorManager.registerListener(this,
+		        sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+		        SensorManager.SENSOR_DELAY_NORMAL);
 		getPrefs();
         initPressurePen();
 	}
@@ -115,6 +135,8 @@ public class PressurePenActivity extends Activity
         if (recorder == null) {
 //       	 you need to add the following line to the manifest for this to work
 //       	 <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+         //recorderAudio = new AudioRecord(AudioSource., testNumber, testNumber, testNumber, testNumber)
+        	
        	 recorder = new MediaRecorder();
        	 recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
        	 recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -122,7 +144,7 @@ public class PressurePenActivity extends Activity
        	 recorder.setOutputFile("/dev/null"); 
        	 try {
 				recorder.prepare();
-			} catch (Exception e) {
+			} catch (IOException e) {
 				Log.e("prepare", "oops");
 				e.printStackTrace();
 			}
@@ -135,13 +157,14 @@ public class PressurePenActivity extends Activity
 				float maxPenPressurePercent = 100;
 				final float multiplier = maxPenPressurePercent / 100;
 				final int volumePercent = (int) (tempVolumeLevel * multiplier);
-				//Log.i("Chad test volumePercent = ", ""+volumePercent);
+//				Log.i("Chad test tempVolumeLevel (raw) = ", ""+tempVolumeLevel);
+//				Log.i("Chad test volumePercent (tempVolumeLevel * multiplier) = ", ""+tempVolumeLevel);
 				if (recorder != null){
 					getWindow().getDecorView().findViewById(android.R.id.content).
 					post(new Runnable() {
 						@Override
 						public void run() {
-							if (volumePercent != 0){
+							if (volumePercent > 0){
 								setStrokeWidthAccordingly(volumePercent);
 							}
 						}
@@ -151,7 +174,7 @@ public class PressurePenActivity extends Activity
 						debugTextView.post(new Runnable() {
 							@Override
 							public void run() {
-								if (volumePercent != 0){
+								if (volumePercent > 0){
 									debugTextView.setText(String.valueOf(volumePercent));
 								}
 //									debugTextView.setText(String.valueOf(testNumberMethod()));
@@ -190,7 +213,7 @@ public class PressurePenActivity extends Activity
 				volumePercent / 100;
 		//mPaint.setStrokeWidth(width);
 		float vol = volumePercent;
-		mPaint.setStrokeWidth(vol);
+		mPaint.setStrokeWidth(width);
 	}
 
 	private void getPrefs() {
@@ -198,6 +221,8 @@ public class PressurePenActivity extends Activity
 		prefs = getSharedPreferences(PREFS_NAME, 0);
 		maxWidthPercent = prefs.getInt("maxWidthPercent", 70);
 		minWidthPercent = prefs.getInt("minWidthPercent", 10);
+		Log.i("maxWidthPercent = ", ""+maxWidthPercent);
+		Log.i("minWidthPercent = ", ""+minWidthPercent);
 		
 	}
 	
@@ -383,6 +408,7 @@ public class PressurePenActivity extends Activity
     
 	@Override
 	protected void onPause() {
+		
 		scheduler.shutdown();
 		try {
 			if (scheduler.awaitTermination(500, TimeUnit.MILLISECONDS)){			
@@ -395,6 +421,7 @@ public class PressurePenActivity extends Activity
 		} catch (Exception e) {
 		}
 		super.onPause();
+		sensorManager.unregisterListener(this);
 	}
 
 	@Override
@@ -402,4 +429,55 @@ public class PressurePenActivity extends Activity
 		unregisterReceiver(receiver);
 		super.onDestroy();
 	}
+
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+		      getAccelerometer(event);
+		    }		
+	}
+	
+	private void getAccelerometer(SensorEvent event) {
+	    float[] values = event.values;
+	    // Movement
+	    float x = values[0];
+	    float y = values[1];
+	    float z = values[2];
+
+	    float accelationSquareRoot = (x * x + y * y + z * z)
+	        / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
+	    long actualTime = System.currentTimeMillis();
+	    if (accelationSquareRoot >= 4) //
+	    {
+	      if (actualTime - lastUpdate < 200) {
+	        return;
+	      }
+	      lastUpdate = actualTime;
+	      //scheduler.shutdown();
+	      //unregisterReceiver(receiver);
+//			try {
+//				if (scheduler.awaitTermination(500, TimeUnit.MILLISECONDS)){			
+//			        if (recorder != null) {
+//			        	recorder.stop();
+//			        	recorder.release();
+//			        	recorder = null;
+//			        }
+//				}
+//			} catch (Exception e) {
+//			}
+	      setContentView(new MyView(this));
+	      getPrefs();
+	      initPressurePen();
+	      Toast.makeText(this, "Device was shackin!", Toast.LENGTH_SHORT)
+	          .show();
+	      
+	    }
+	  }
+	
 }
