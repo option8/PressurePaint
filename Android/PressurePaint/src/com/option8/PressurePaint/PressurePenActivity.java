@@ -18,6 +18,9 @@
 
 package com.option8.PressurePaint;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Timer;
 import java.util.concurrent.Executors;
@@ -30,7 +33,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -42,19 +47,24 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.MediaRecorder;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class PressurePenActivity extends Activity
         implements ColorPickerDialog.OnColorChangedListener, SensorEventListener  {
-	
+	private Canvas  mCanvas;
 	private SensorManager sensorManager;
 	private long lastUpdate;
 	private static MediaRecorder recorder = null;
@@ -67,6 +77,7 @@ public class PressurePenActivity extends Activity
 	private BroadcastReceiver receiver;
 	public static final String PREFS_NAME = "MyPrefsFile";
 	private String TAG = "PressurePenActivity";
+	private Bitmap mBitmapImage;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +135,7 @@ public class PressurePenActivity extends Activity
 	@Override
 	protected void onResume() {
 		super.onResume();
+		Log.i(TAG,"inside onResume");
 		sensorManager.registerListener(this,
 		        sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
 		        SensorManager.SENSOR_DELAY_NORMAL);
@@ -252,7 +264,9 @@ public class PressurePenActivity extends Activity
 		private static final float MAXP = 0.75f;
         
         private Bitmap  mBitmap;
-        private Canvas  mCanvas;
+        private Bitmap  mBitmapStar;
+        
+        
         private Path    mPath;
         private Paint   mBitmapPaint;
         
@@ -267,13 +281,28 @@ public class PressurePenActivity extends Activity
             int width = displaymetrics.widthPixels;
 
             mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            mBitmapStar = BitmapFactory.decodeResource(this
+                    .getResources(), R.drawable.ic_pen);
+            
             mCanvas = new Canvas(mBitmap);
+            
             mPath = new Path();
-            mBitmapPaint = new Paint(Paint.DITHER_FLAG);
+            //mBitmapPaint = new Paint(Paint.DITHER_FLAG);
+            mBitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG | Paint.FILTER_BITMAP_FLAG);
+            // CHF - makes line transparent - mBitmapPaint.setAlpha(0x7F);
+            // save the image - http://stackoverflow.com/questions/2174875/android-canvas-to-jpg
+            setDrawingCacheEnabled(true);
+            
+            
         }
 
         @Override
         protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+//        	mBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);            
+//        	   mCanvas = new Canvas(mBitmap);  
+//        	   //mCanvas.drawColor(Color.GREEN);
+//        	       super.onSizeChanged(w, h, oldw, oldh);
+        	       
             super.onSizeChanged(w, h, oldw, oldh);
         }
         
@@ -281,9 +310,17 @@ public class PressurePenActivity extends Activity
         protected void onDraw(Canvas canvas) {
             canvas.drawColor(0xFFAAAAAA);
             
-            canvas.drawBitmap(mBitmap, 0, 0, mBitmapPaint);
+            if (mBitmapImage!=null){
+            	canvas.drawBitmap(mBitmapImage, 0, 0, null);                	
+            }
+            //canvas.drawBitmap(mBitmapStar, 0, 0, null);
+            canvas.drawBitmap(mBitmap, 0, 0, mBitmapPaint);    
+            
             
             canvas.drawPath(mPath, mPaint);
+            
+
+            
         }
         
         private float mX, mY;
@@ -355,6 +392,12 @@ public class PressurePenActivity extends Activity
     
     private static final int ERASE_MENU_ID = Menu.FIRST + 3;
 
+    private static final int SAVE_MENU_ID = Menu.FIRST + 4;
+    
+    private static final int LOAD_MENU_ID = Menu.FIRST + 5;
+    
+    private static final int RESULT_LOAD_IMAGE = 0;
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -365,7 +408,10 @@ public class PressurePenActivity extends Activity
         
         menu.add(0, ERASE_MENU_ID, 0, "Erase").setShortcut('5', 'z');
 
-
+        menu.add(0, SAVE_MENU_ID, 0, "Save").setShortcut('6', 's');
+        
+        menu.add(0, LOAD_MENU_ID, 0, "Load").setShortcut('7', 'l');
+        
         /****   Is this the mechanism to extend with filter effects?
         Intent intent = new Intent(null, getIntent().getData());
         intent.addCategory(Intent.CATEGORY_ALTERNATIVE);
@@ -401,14 +447,63 @@ public class PressurePenActivity extends Activity
             case DEBUG_MENU_ID:
             	startActivity(new Intent(this, DebugActivity.class));
             	return true;
+            	
+            case SAVE_MENU_ID:
+            	View v = getWindow().getDecorView().findViewById(android.R.id.content);
+            	v.draw(mCanvas);
+            	
+            	v.setDrawingCacheEnabled(true);
+              try {
+            	  // TODO: prompt for file name and explain where it will be saved
+            	  	v.getDrawingCache().compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(new File("/mnt/sdcard/arun.jpg")));
+    				//mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(new File("/mnt/sdcard/arun.jpg")));
+    			} catch (FileNotFoundException e) {
+    				e.printStackTrace();
+    			}
+            	return true;
+            	
+            case LOAD_MENU_ID:	
+            	Intent i = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            	startActivityForResult(i, RESULT_LOAD_IMAGE);
+            	
+            	return true;	
 
         }
         return super.onOptionsItemSelected(item);
     }
     
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+            Cursor cursor = getContentResolver().query(selectedImage,filePathColumn, null, null, null);
+            cursor.moveToFirst();
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+            View v = getWindow().getDecorView().findViewById(android.R.id.content);
+//            v.setBackgroundResource(RESULT_LOAD_IMAGE);
+            
+            Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+            int h = display.getHeight();; // height in pixels
+            int w = display.getWidth();; // width in pixels   
+            mBitmapImage = BitmapFactory.decodeFile(picturePath);
+            Bitmap scaledImage = Bitmap.createScaledBitmap(mBitmapImage, h, w, true);
+            mBitmapImage = scaledImage;
+            v.postInvalidate();
+            //Canvas canvas = drawBitmap(mBitmapImage, 0, 0, null);
+            //ImageView imageView = (ImageView) findViewById(R.id.imgView);
+            //imageView.draw(canvas);
+            //imageView.setImageBitmap(mBitmapImage);
+            //imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+        }
+    }
+    
 	@Override
 	protected void onPause() {
-		
+		Log.i(TAG,"inside onPause");
 		scheduler.shutdown();
 		try {
 			if (scheduler.awaitTermination(500, TimeUnit.MILLISECONDS)){			
@@ -426,14 +521,13 @@ public class PressurePenActivity extends Activity
 
 	@Override
 	protected void onDestroy() {
+		Log.i(TAG,"inside onDestroy");
 		unregisterReceiver(receiver);
 		super.onDestroy();
 	}
 
 	@Override
-	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		// TODO Auto-generated method stub
-		
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {		
 	}
 
 	@Override
@@ -459,22 +553,13 @@ public class PressurePenActivity extends Activity
 	        return;
 	      }
 	      lastUpdate = actualTime;
-	      //scheduler.shutdown();
-	      //unregisterReceiver(receiver);
-//			try {
-//				if (scheduler.awaitTermination(500, TimeUnit.MILLISECONDS)){			
-//			        if (recorder != null) {
-//			        	recorder.stop();
-//			        	recorder.release();
-//			        	recorder = null;
-//			        }
-//				}
-//			} catch (Exception e) {
-//			}
+
+//	      View v = getWindow().getDecorView().findViewById(android.R.id.content);
+//	      v.invalidate();	      
 	      setContentView(new MyView(this));
 	      getPrefs();
 	      initPressurePen();
-	      Toast.makeText(this, "Device was shackin!", Toast.LENGTH_SHORT)
+	      Toast.makeText(this, "Device was shacken!", Toast.LENGTH_SHORT)
 	          .show();
 	      
 	    }
