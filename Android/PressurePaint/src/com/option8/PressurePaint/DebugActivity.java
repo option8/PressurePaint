@@ -72,6 +72,7 @@ public class DebugActivity extends PressurePenActivity implements OnSeekBarChang
 		PressurePenActivity.maxWidthPercent = maxWidthPercent;
 		PressurePenActivity.minWidthPercent = minWidthPercent;
         initPressurePen();
+        //run();
 	}
 	
 	@Override
