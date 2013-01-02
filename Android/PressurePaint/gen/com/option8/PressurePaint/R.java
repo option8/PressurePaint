@@ -15,7 +15,6 @@ public final class R {
     }
     public static final class id {
         public static final int debugTextView=0x7f050000;
-        public static final int imgView=0x7f050007;
         public static final int mainFL=0x7f050006;
         public static final int maxSeekBar=0x7f050002;
         public static final int maxTextView=0x7f050004;
