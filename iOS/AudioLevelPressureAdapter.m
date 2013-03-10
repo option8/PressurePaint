@@ -23,19 +23,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 #include <math.h>
 #import "AudioLevelPressureAdapter.h"
 
-static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQueueBufferRef inBuffer,
-                              const AudioTimeStamp *inStartTime,UInt32 inNumPackets,const AudioStreamPacketDescription *inPacketDesc)
-{
+
+/*
+ * Sends constant tone for pen to modulate
+ */
+static void HandleOutputBuffer (
+    void                *inUserData,
+    AudioQueueRef       outAQ,
+    AudioQueueBufferRef outBuffer
+) {
+    AudioLevelPressureAdapter *adapter = (AudioLevelPressureAdapter *)inUserData;
+    [adapter generateTone:outBuffer];
+    AudioQueueEnqueueBuffer(outAQ, outBuffer, 0, NULL);
+}
+
+
+/*
+ * Samples mic input for pen modulation
+ */
+static void HandInputBuffer(
+    void                *inUserData,
+    AudioQueueRef       inAudioQueue,
+    AudioQueueBufferRef inBuffer,
+    const AudioTimeStamp *inStartTime,
+    UInt32              inNumPackets,
+    const AudioStreamPacketDescription *inPacketDesc
+) {
     AudioLevelPressureAdapter *adapter = (AudioLevelPressureAdapter *) inUserData;
-    
-//    NSLog(@"Callback");
-    
-    // Monitor the levels on input
-/*    if(inNumPackets > 0)
-    {
-        NSLog(@"Detected source, sample levels");
-    }
-*/
     
     // Reset the buffer and prepare for next packet
     if([adapter isRunning])
@@ -44,12 +58,10 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
     }
 }
 
+
+
 @implementation AudioLevelPressureAdapter
 
-@synthesize queueObject;
-@synthesize audioFormat;
-@synthesize audioLevels;
-@synthesize startingPacketNumber;
 @synthesize notificationDelegate;
 
 - (id) init
@@ -66,26 +78,50 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
     width = w;
     maInputs = [NSMutableArray array];
     
+    fstep = kBytesPerFrame * M_PI * kFrequency / kSampleRate;
+    
     if (self != nil)
     {
-       // audioFormat.mSampleRate             = 44100.00;
-        audioFormat.mSampleRate             = 1000.00;
+        audioFormat.mSampleRate             = kSampleRate;
         audioFormat.mFormatID               = kAudioFormatLinearPCM;
         audioFormat.mFormatFlags            = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
         audioFormat.mFramesPerPacket        = 1;
         audioFormat.mChannelsPerFrame       = 1;
         audioFormat.mBitsPerChannel         = 16;
         audioFormat.mBytesPerPacket         = 2;
-        audioFormat.mBytesPerFrame          = 2;
+        audioFormat.mBytesPerFrame          = kBytesPerFrame;
         
-        AudioQueueNewInput(&audioFormat,recordingCallback,self,NULL,NULL,0,&queueObject);
+        AudioQueueNewInput(
+            &audioFormat,
+            HandInputBuffer,
+            self,
+            NULL,
+            NULL,
+            0,
+            &inputQueue
+        );
         
-        UInt32 sizeOfRecordingFormatASBDStruct = sizeof (audioFormat);
+        AudioQueueNewOutput(
+            &audioFormat,
+            HandleOutputBuffer,
+            self,
+            NULL,
+            NULL,
+            0,
+            &outputQueue
+        );
         
-        AudioQueueGetProperty(queueObject, kAudioQueueProperty_StreamDescription, &audioFormat, &sizeOfRecordingFormatASBDStruct);
+        UInt32 bufferSizeBytes = kBufferSizeFrames * audioFormat.mBytesPerFrame;
         
+        for (int i=0; i<kNumBuffers; i++)
+        {
+            AudioQueueAllocateBuffer(outputQueue, bufferSizeBytes, &outputBuffers[i]);
+            
+            HandleOutputBuffer(self, outputQueue, outputBuffers[i]);
+        }
+        
+        [self startGeneratingTone];
         [self enableLevelMetering];
-//        NSLog(@"Initialized");
     }
     
     return self;
@@ -107,7 +143,7 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
     UInt32 propertySize = sizeof (UInt32);
     OSStatus result;
     
-    result = AudioQueueGetProperty (queueObject, kAudioQueueProperty_IsRunning, &isRunning, &propertySize);
+    result = AudioQueueGetProperty (inputQueue, kAudioQueueProperty_IsRunning, &isRunning, &propertySize);
     
     if( result != noErr)
     {
@@ -121,17 +157,17 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
 
 - (void) enableLevelMetering
 {
-    self.audioLevels = (AudioQueueLevelMeterState *) calloc (sizeof (AudioQueueLevelMeterState), audioFormat.mChannelsPerFrame);
+    audioLevels = (AudioQueueLevelMeterState *) calloc (sizeof (AudioQueueLevelMeterState), audioFormat.mChannelsPerFrame);
     UInt32 trueValue = true;
-    AudioQueueSetProperty(self.queueObject, kAudioQueueProperty_EnableLevelMetering, &trueValue, sizeof (UInt32));
+    AudioQueueSetProperty(inputQueue, kAudioQueueProperty_EnableLevelMetering, &trueValue, sizeof (UInt32));
 }
 
 - (void) getAudioLevels:(Float32 *)levels peakLevels:(Float32 *)peakLevels
 {
     UInt32 propertySize = audioFormat.mChannelsPerFrame * sizeof (AudioQueueLevelMeterState);
-    AudioQueueGetProperty(self.queueObject, (AudioQueuePropertyID) kAudioQueueProperty_CurrentLevelMeter, self.audioLevels, &propertySize);
-    levels[0]       = self.audioLevels[0].mAveragePower;
-    peakLevels[0]   = self.audioLevels[0].mPeakPower;
+    AudioQueueGetProperty(inputQueue, (AudioQueuePropertyID) kAudioQueueProperty_CurrentLevelMeter, audioLevels, &propertySize);
+    levels[0]       = audioLevels[0].mAveragePower;
+    peakLevels[0]   = audioLevels[0].mPeakPower;
 }
 
 - (void) dealloc
@@ -141,8 +177,8 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
 
 - (void) monitor
 {
-    AudioQueueStart(queueObject, NULL);
-//    NSLog(@"Monitoring started");
+    AudioQueueStart(outputQueue, NULL);
+    AudioQueueStart(inputQueue, NULL);
 }
 
 -(BOOL) isPossiblyConnected
@@ -150,7 +186,7 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
     CFStringRef state = nil;
     UInt32 propertySize = sizeof(CFStringRef);
     AudioSessionInitialize(NULL, NULL, NULL, NULL);
-    OSStatus status = AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &state);
+    AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &state);
     
     return YES; // Always show connected
     
@@ -160,4 +196,30 @@ static void recordingCallback(void *inUserData,AudioQueueRef inAudioQueue,AudioQ
         return NO;
     }
 }
+
+-(void) generateTone:(AudioQueueBuffer *)buffer
+{
+    SInt16 *caOutBuffer = (SInt16*)buffer->mAudioData;
+    
+    buffer->mAudioDataByteSize = kBufferSizeFrames * audioFormat.mBytesPerFrame;
+    
+    for (int s=0; s<kBufferSizeFrames*2; s+=2)
+    {
+        float sample = sinf(phase);
+        short sampleI = (int)(sample * 32767.0);
+        
+        caOutBuffer[s] = sampleI;
+        
+        phase += fstep;
+    }
+    
+    phase = fmodf(phase, 2 * M_PI);
+}
+
+- (void) startGeneratingTone
+{
+    OSStatus status = AudioQueueSetParameter(outputQueue, kAudioQueueParam_Volume, 1.0);
+    status = AudioQueueStart(outputQueue, NULL);
+}
+
 @end
