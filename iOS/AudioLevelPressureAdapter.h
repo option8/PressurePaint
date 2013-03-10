@@ -22,8 +22,16 @@
 #import <AudioToolbox/AudioToolbox.h>
 #include <math.h>
 
+#define kBufferSizeFrames   512
+#define kNumBuffers         4
+#define kFrequency          4000
+#define kSampleRate         44100
+#define kBytesPerFrame      2
+
 @interface AudioLevelPressureAdapter : NSObject {
-    AudioQueueRef queueObject;
+    AudioQueueRef inputQueue;
+    AudioQueueRef outputQueue;
+    AudioQueueBufferRef outputBuffers[kNumBuffers];
     AudioStreamBasicDescription audioFormat;
     AudioQueueLevelMeterState *audioLevels;
     SInt64 startingPacketNumber;
@@ -32,14 +40,13 @@
     // For moving average filtering
     int width;
     NSMutableArray *maInputs;
+    
+    // For wave generation
+    float fstep;
+    float phase;
 }
 
-@property (readwrite)   AudioQueueRef   queueObject;
-@property (readwrite)   AudioStreamBasicDescription audioFormat;
-@property (readwrite)   AudioQueueLevelMeterState *audioLevels;
-@property (readwrite)   SInt64          startingPacketNumber;
 @property (nonatomic, retain) id        notificationDelegate;
-
 
 -(id) init;
 -(id) initWithWidth: (int) w;
@@ -51,5 +58,8 @@
 -(BOOL) isRunning;
 -(void) monitor;
 -(BOOL) isPossiblyConnected;
+
+-(void) generateTone: (AudioQueueBuffer *)buffer;
+-(void) startGeneratingTone;
 
 @end
