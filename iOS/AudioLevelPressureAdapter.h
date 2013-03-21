@@ -26,13 +26,15 @@
 #define kNumBuffers         4
 #define kFrequency          4000
 #define kSampleRate         44100
+#define kInputSampleRate    1000
 #define kBytesPerFrame      2
 
 @interface AudioLevelPressureAdapter : NSObject {
     AudioQueueRef inputQueue;
     AudioQueueRef outputQueue;
     AudioQueueBufferRef outputBuffers[kNumBuffers];
-    AudioStreamBasicDescription audioFormat;
+    AudioStreamBasicDescription outputFormat;
+    AudioStreamBasicDescription inputFormat;
     AudioQueueLevelMeterState *audioLevels;
     SInt64 startingPacketNumber;
     id notificationDelegate;

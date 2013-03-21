@@ -32,7 +32,7 @@ static void HandleOutputBuffer (
     AudioQueueRef       outAQ,
     AudioQueueBufferRef outBuffer
 ) {
-    AudioLevelPressureAdapter *adapter = (AudioLevelPressureAdapter *)inUserData;
+    AudioLevelPressureAdapter *adapter = (AudioLevelPressureAdapter *)inUserData;    
     [adapter generateTone:outBuffer];
     AudioQueueEnqueueBuffer(outAQ, outBuffer, 0, NULL);
 }
@@ -41,7 +41,7 @@ static void HandleOutputBuffer (
 /*
  * Samples mic input for pen modulation
  */
-static void HandInputBuffer(
+static void HandleInputBuffer(
     void                *inUserData,
     AudioQueueRef       inAudioQueue,
     AudioQueueBufferRef inBuffer,
@@ -50,12 +50,7 @@ static void HandInputBuffer(
     const AudioStreamPacketDescription *inPacketDesc
 ) {
     AudioLevelPressureAdapter *adapter = (AudioLevelPressureAdapter *) inUserData;
-    
-    // Reset the buffer and prepare for next packet
-    if([adapter isRunning])
-    {
-        AudioQueueEnqueueBuffer(inAudioQueue, inBuffer, 0, NULL);
-    }
+    AudioQueueEnqueueBuffer(inAudioQueue, inBuffer, 0, NULL);
 }
 
 
@@ -70,9 +65,7 @@ static void HandInputBuffer(
 }
 
 - (id) initWithWidth: (int)w
-{
-//    NSLog(@"Loading pressure adapter");
-    
+{    
     self = [super init];
     
     width = w;
@@ -82,18 +75,18 @@ static void HandInputBuffer(
     
     if (self != nil)
     {
-        audioFormat.mSampleRate             = kSampleRate;
-        audioFormat.mFormatID               = kAudioFormatLinearPCM;
-        audioFormat.mFormatFlags            = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
-        audioFormat.mFramesPerPacket        = 1;
-        audioFormat.mChannelsPerFrame       = 1;
-        audioFormat.mBitsPerChannel         = 16;
-        audioFormat.mBytesPerPacket         = 2;
-        audioFormat.mBytesPerFrame          = kBytesPerFrame;
+        inputFormat.mSampleRate             = kInputSampleRate;
+        inputFormat.mFormatID               = kAudioFormatLinearPCM;
+        inputFormat.mFormatFlags            = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
+        inputFormat.mFramesPerPacket        = 1;
+        inputFormat.mChannelsPerFrame       = 1;
+        inputFormat.mBitsPerChannel         = 16;
+        inputFormat.mBytesPerPacket         = kBytesPerFrame;
+        inputFormat.mBytesPerFrame          = kBytesPerFrame;
         
         AudioQueueNewInput(
-            &audioFormat,
-            HandInputBuffer,
+            &inputFormat,
+            HandleInputBuffer,
             self,
             NULL,
             NULL,
@@ -101,8 +94,23 @@ static void HandInputBuffer(
             &inputQueue
         );
         
+        UInt32 sizeOfRecordingFormatASBDStruct = sizeof (inputFormat);
+        AudioQueueGetProperty(inputQueue,
+                              kAudioQueueProperty_StreamDescription,
+                              &inputFormat,
+                              &sizeOfRecordingFormatASBDStruct);
+
+        outputFormat.mSampleRate             = kSampleRate;
+        outputFormat.mFormatID               = kAudioFormatLinearPCM;
+        outputFormat.mFormatFlags            = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
+        outputFormat.mFramesPerPacket        = 1;
+        outputFormat.mChannelsPerFrame       = 1;
+        outputFormat.mBitsPerChannel         = 16;
+        outputFormat.mBytesPerPacket         = kBytesPerFrame;
+        outputFormat.mBytesPerFrame          = kBytesPerFrame;
+                
         AudioQueueNewOutput(
-            &audioFormat,
+            &outputFormat,
             HandleOutputBuffer,
             self,
             NULL,
@@ -111,12 +119,12 @@ static void HandInputBuffer(
             &outputQueue
         );
         
-        UInt32 bufferSizeBytes = kBufferSizeFrames * audioFormat.mBytesPerFrame;
+        
+        UInt32 bufferSizeBytes = kBufferSizeFrames * outputFormat.mBytesPerFrame;
         
         for (int i=0; i<kNumBuffers; i++)
         {
             AudioQueueAllocateBuffer(outputQueue, bufferSizeBytes, &outputBuffers[i]);
-            
             HandleOutputBuffer(self, outputQueue, outputBuffers[i]);
         }
         
@@ -157,14 +165,14 @@ static void HandInputBuffer(
 
 - (void) enableLevelMetering
 {
-    audioLevels = (AudioQueueLevelMeterState *) calloc (sizeof (AudioQueueLevelMeterState), audioFormat.mChannelsPerFrame);
+    audioLevels = (AudioQueueLevelMeterState *) calloc (sizeof (AudioQueueLevelMeterState), inputFormat.mChannelsPerFrame);
     UInt32 trueValue = true;
     AudioQueueSetProperty(inputQueue, kAudioQueueProperty_EnableLevelMetering, &trueValue, sizeof (UInt32));
 }
 
 - (void) getAudioLevels:(Float32 *)levels peakLevels:(Float32 *)peakLevels
 {
-    UInt32 propertySize = audioFormat.mChannelsPerFrame * sizeof (AudioQueueLevelMeterState);
+    UInt32 propertySize = inputFormat.mChannelsPerFrame * sizeof (AudioQueueLevelMeterState);
     AudioQueueGetProperty(inputQueue, (AudioQueuePropertyID) kAudioQueueProperty_CurrentLevelMeter, audioLevels, &propertySize);
     levels[0]       = audioLevels[0].mAveragePower;
     peakLevels[0]   = audioLevels[0].mPeakPower;
@@ -177,18 +185,20 @@ static void HandInputBuffer(
 
 - (void) monitor
 {
-    AudioQueueStart(outputQueue, NULL);
-    AudioQueueStart(inputQueue, NULL);
+    OSStatus error = AudioQueueStart(inputQueue, NULL);
+    if (error != noErr) {
+        NSLog(@"Error starting inputQueue: %ld", error);
+    }
 }
 
 -(BOOL) isPossiblyConnected
 {
+    return YES; // Always show connected
+    
     CFStringRef state = nil;
     UInt32 propertySize = sizeof(CFStringRef);
     AudioSessionInitialize(NULL, NULL, NULL, NULL);
     AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &state);
-    
-    return YES; // Always show connected
     
     if((NSString *)state == @"MicrophoneWired") {
         return YES;
@@ -201,7 +211,7 @@ static void HandInputBuffer(
 {
     SInt16 *caOutBuffer = (SInt16*)buffer->mAudioData;
     
-    buffer->mAudioDataByteSize = kBufferSizeFrames * audioFormat.mBytesPerFrame;
+    buffer->mAudioDataByteSize = kBufferSizeFrames * outputFormat.mBytesPerFrame;
     
     for (int s=0; s<kBufferSizeFrames*2; s+=2)
     {
