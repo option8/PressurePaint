@@ -169,7 +169,8 @@
         if (self.pressure == nil)
         {
             // Setup the audio session
-            UInt32 sessionCategory = kAudioSessionCategory_RecordAudio;
+            AudioSessionInitialize(NULL, NULL, NULL, NULL);
+            UInt32 sessionCategory = kAudioSessionCategory_PlayAndRecord;
             AudioSessionSetProperty(kAudioSessionProperty_AudioCategory,
                                     sizeof (sessionCategory),
                                     &sessionCategory);
