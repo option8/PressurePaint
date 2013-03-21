@@ -1,0 +1,967 @@
+TPressurePaint
+v5
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist build/Release-iphoneos/PressurePaint.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Info.plist PressurePaint-Info.plist
+cCpResource Select.caf build/Release-iphoneos/PressurePaint.app/Select.caf
+cCpResource Erase.caf build/Release-iphoneos/PressurePaint.app/Erase.caf
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Particle.png Particle.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/0.png Images/0.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/1.png Images/1.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/2.png Images/2.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/3.png Images/3.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/4.png Images/4.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/5.png Images/5.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/6.png Images/6.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/7.png Images/7.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/8.png Images/8.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/9.png Images/9.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/10.png Images/10.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/11.png Images/11.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/12.png Images/12.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/13.png Images/13.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/14.png Images/14.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/15.png Images/15.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-57px.png icon-57px.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-114px.png icon-114px.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-72.png icon-72.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default~ipad.png Default~ipad.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png Default-Portrait~ipad.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png Default-Landscape~ipad.png
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default@2x.png Default@2x.png
+cCompileXIB /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xib
+cCompileXIB /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib
+cCpResource iTunesArtwork build/Release-iphoneos/PressurePaint.app/iTunesArtwork
+cCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png Default-568h@2x.png
+cProcessPCH /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.pth Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint normal armv7
+cGenerateDSYMFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYM /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint
+cProcessProductPackaging "/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision
+cProcessProductPackaging "/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision
+cTouch /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent
+cCodeSign /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk
+c000000005102E2A90000000000000110
+t1359143593
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+c00000000511293C000000000000001A7
+t1360171968
+s423
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+c00000000511293C000000000000001E5
+t1360171968
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000511293C400000000006B1F40
+t1360171972
+s7020352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000511293C40000000000322700
+t1360171972
+s3286784
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000511293C6000000000062AD10
+t1360171974
+s6466832
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c00000000511293C60000000000024190
+t1360171974
+s147856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000511293C700000000003596B0
+t1360171975
+s3511984
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c00000000511293C70000000000000E8D
+t1360171975
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000511293CB00000000011BCDF0
+t1360171979
+s18599408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/include/TargetConditionals.h
+c00000000511293D500000000000031E9
+t1360171989
+s12777
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m
+c00000000513F79440000000000001A37
+t1363114308
+s6711
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m
+c000000004E270E600000000000002560
+t1311182432
+s9568
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m
+c000000004FE29245000000000000428F
+t1340248645
+s17039
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m
+c000000004C599DF90000000000000BB3
+t1280941561
+s2995
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m
+c000000004EA190220000000000000FE5
+t1319211042
+s4069
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-568h@2x.png
+c000000005049BB1000000000000048A2
+t1347009296
+s18594
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-Landscape~ipad.png
+c000000004F75C567000000000000316F
+t1333118311
+s12655
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-Portrait~ipad.png
+c000000004F75C55F000000000000316F
+t1333118303
+s12655
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default@2x.png
+c000000004FCE56D50000000000004ED0
+t1338922709
+s20176
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default~ipad.png
+c000000004F75C567000000000000316F
+t1333118311
+s12655
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Erase.caf
+c0000000048B6555F0000000000008120
+t1219908959
+s33056
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/0.png
+c000000004E2702FE00000000000003BF
+t1311179518
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/1.png
+c000000004E27030900000000000003BF
+t1311179529
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/10.png
+c000000004E27034B00000000000003BF
+t1311179595
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/11.png
+c000000004E27035100000000000003BF
+t1311179601
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/12.png
+c000000004E27035600000000000003BF
+t1311179606
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/13.png
+c000000004E27035B00000000000003BF
+t1311179611
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/14.png
+c000000004E27036000000000000003BF
+t1311179616
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/15.png
+c000000004E27036A00000000000003C6
+t1311179626
+s966
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/2.png
+c000000004E27031000000000000003C1
+t1311179536
+s961
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/3.png
+c000000004E27031B00000000000003BF
+t1311179547
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/4.png
+c000000004E27032600000000000003BF
+t1311179558
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/5.png
+c000000004E27032D00000000000003BF
+t1311179565
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/6.png
+c000000004E27033400000000000003BF
+t1311179572
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/7.png
+c000000004E27033A00000000000003BF
+t1311179578
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/8.png
+c000000004E27034000000000000003BF
+t1311179584
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/9.png
+c000000004E27034600000000000003BF
+t1311179590
+s959
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xib
+c000000004FCE4EBF0000000000004887
+t1338920639
+s18567
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib
+c000000004FCE4E6E00000000000048DD
+t1338920558
+s18653
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Particle.png
+c000000004C55CE04000000000000130D
+t1280691716
+s4877
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Prefix.pch
+c0000000048B6555F0000000000000051
+t1219908959
+s81
+i<TargetConditionals.h>
+i<UIKit/UIKit.h>
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Select.caf
+c0000000048B6555F000000000000152C
+t1219908959
+s5420
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.o
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.o
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.o
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.o
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PressurePaint.LinkFileList
+c00000000513F7E3700000000000003F7
+t1363115575
+s1015
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.o
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYM
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/0.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/1.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/10.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/11.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/12.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/13.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/14.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/15.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/2.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/3.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/4.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/5.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/6.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/7.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/8.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/9.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default@2x.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default~ipad.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Erase.caf
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Info.plist
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/MainWindow-iPad.nib
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/MainWindow.nib
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Particle.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PkgInfo
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/ResourceRules.plist
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Select.caf
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/iTunesArtwork
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-114px.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-57px.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-72.png
+t2
+s0
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/iTunesArtwork
+c000000004FD8B862000000000002FC77
+t1339603042
+s195703
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-114px.png
+c000000004F74A8F500000000000035B0
+t1333045493
+s13744
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-57px.png
+c000000004F74A8BF0000000000001B0C
+t1333045439
+s6924
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-72.png
+c000000004F74A92A0000000000002150
+t1333045546
+s8528
+
+N/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m
+c000000004C599DF90000000000000A58
+t1280941561
+s2648
+
+N/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision
+c00000000513F7D9D0000000000001E0F
+t1363115421
+s7695
+
+N/Users/option8/Library/MobileDevice/Provisioning Profiles/A4618A14-79B5-4D07-9871-8DE6D5DEE086.mobileprovision
+c000000004F75CCB30000000000001DE0
+t1333120179
+s7648
+
+N/var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.pth
+t2
+s0
+
+NPressurePaint-Info.plist
+c00000000513F7DE400000000000007A1
+t1363115492
+s1953
+
+CBuild AST from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m
+r0
+
+CBuild AST from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m
+r0
+
+CBuild AST from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m
+r0
+
+CBuild AST from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m
+r0
+
+CBuild AST from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m
+r0
+
+CBuild AST from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies761addb6b5efb641^26c59fb7b5efb641^---0#1#0#--18"Check dependencies36"B2C803D8-82FE-491C-93E5-23191AFFB58B-
+
+CCodeSign /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+s384808439.255629
+e384808452.864770
+r1
+xCodeSign
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"CodeSign build/Release-iphoneos/PressurePaint.appe38c41f7b5efb641^8061dd04b6efb641^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/0000000000000000^952"CodeSign build/Release-iphoneos/PressurePaint.app    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign --force --sign 2e58863205375615015d03ace30b3a04e50e2c23 --resource-rules=/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/ResourceRules.plist --entitlements /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app36"34E8D3D2-4B1D-42A2-9EA5-FB3F82FB12DE-
+
+CCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808416.639764
+e384808422.182709
+r1
+xCompileC
+xbuild/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.o
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m:49:
+o/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.h:65:56: warning: property type 'PaintingWindow *' is incompatible with type 'UIWindow *' inherited from 'UIApplicationDelegate'
+o@property (nonatomic, retain) IBOutlet PaintingWindow *window;
+o                                                       ^
+o/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h:329:41: note: property declared here
+o@property (nonatomic, retain) UIWindow *window NS_AVAILABLE_IOS(5_0);
+o                                        ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.mc2f6a3e0b5efb641^9a082fe6b5efb641^-797"In file included from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m:49:/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.h:65:56: warning: property type 'PaintingWindow *' is incompatible with type 'UIWindow *' inherited from 'UIApplicationDelegate'@property (nonatomic, retain) IBOutlet PaintingWindow *window;                                                       ^/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h:329:41: note: property declared here@property (nonatomic, retain) UIWindow *window NS_AVAILABLE_IOS(5_0);                                        ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@110"Property type 'PaintingWindow *' is incompatible with type 'UIWindow *' inherited from 'UIApplicationDelegate'-384808422#18446744073709551615#0#2(2@118"In file included from /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m:49:-384808422#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@108"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m0000000000000000^48#8#48#8#2528#0#30"Apple LLVM compiler 4.2 Notice--2@22"Property declared here-384808422#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@183"file://localhost/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h0000000000000000^328#40#328#40#17636#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@108"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.h0000000000000000^64#55#64#55#2868#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@108"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m0000000000000000^3807"CompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.o Classes/AppController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -include /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch -MMD -MT dependencies -MF /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.d --serialize-diagnostics /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/AppController.m -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AppController.o36"07DE6C06-609B-4000-BD2C-2BE7AA5586A7-
+
+CCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808423.329085
+e384808423.601716
+r1
+xCompileC
+xbuild/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.o
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m:193:26: warning: direct comparison of a string literal has undefined behavior [-Wobjc-string-compare]
+o    if((NSString *)state == @"MicrophoneWired") {
+o                         ^  ~~~~~~~~~~~~~~~~~~
+o/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m:193:26: note: use 'isEqual:' instead
+o    if((NSString *)state == @"MicrophoneWired") {
+o                         ^~
+o       [                 isEqual:             ]
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m267354e7b5efb641^daae9ce7b5efb641^-577"/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m:193:26: warning: direct comparison of a string literal has undefined behavior [-Wobjc-string-compare]    if((NSString *)state == @"MicrophoneWired") {                         ^  ~~~~~~~~~~~~~~~~~~/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m:193:26: note: use 'isEqual:' instead    if((NSString *)state == @"MicrophoneWired") {                         ^~       [                 isEqual:             ]1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@60"Direct comparison of a string literal has undefined behavior-384808423#18446744073709551615#0#1(2@22"Use 'isEqual:' instead-384808423#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^192#25#192#25#5988#0#14"Semantic Issue3(3@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^192#7#192#7#5970#0#3@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^192#25#192#27#5988#2#3@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^192#46#192#46#6009#0#-1#27"com.apple.dt.IDE.diagnostic3@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^192#25#192#25#5988#0#14"Semantic Issue1(3@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^192#28#192#46#5991#1#-0#0#0#-19%DVTDocumentLocation4@112"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m0000000000000000^3863"CompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.o AudioLevelPressureAdapter.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -include /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch -MMD -MT dependencies -MF /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.d --serialize-diagnostics /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/AudioLevelPressureAdapter.m -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/AudioLevelPressureAdapter.o36"4D3D6489-38F0-47C9-85E4-3815F8A2CA53-
+
+CCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808420.020017
+e384808422.219605
+r1
+xCompileC
+xbuild/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.o
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.ma04e05e4b5efb641^c24b38e6b5efb641^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m0000000000000000^3801"CompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.o Classes/PaintingView.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -include /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch -MMD -MT dependencies -MF /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.d --serialize-diagnostics /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingView.m -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingView.o36"D9094487-06A1-4B78-8D64-68D29D98B277-
+
+CCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808422.716867
+e384808423.327700
+r1
+xCompileC
+xbuild/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.o
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m9ed0b7e6b5efb641^afd279e7b5efb641^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m0000000000000000^3813"CompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.o Classes/PaintingWindow.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -include /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch -MMD -MT dependencies -MF /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.d --serialize-diagnostics /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/PaintingWindow.m -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PaintingWindow.o36"8610E1D7-9BFF-4416-A511-1056AD36537F-
+
+CCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808422.220997
+e384808422.715540
+r1
+xCompileC
+xbuild/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.o
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m2cbb38e6b5efb641^684150e7b5efb641^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m0000000000000000^3795"CompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.o Classes/SoundEffect.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -include /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch -MMD -MT dependencies -MF /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.d --serialize-diagnostics /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Classes/SoundEffect.m -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/SoundEffect.o36"E29AB285-5C8E-4689-B8EF-725DEA548D3F-
+
+CCompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808416.639187
+e384808420.018560
+r1
+xCompileC
+xbuild/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.o
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.md9cea3e0b5efb641^12bd04e4b5efb641^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m0000000000000000^3737"CompileC build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.o main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -include /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch -MMD -MT dependencies -MF /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.d --serialize-diagnostics /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/main.m -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/main.o36"7715A99C-B87F-4F99-AC31-BBD82E4407ED-
+
+CCompileXIB /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xib
+s384808380.567311
+e384808408.879248
+r1
+xCompileXIB
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compiling /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xibda5491bcb5efb641^9417e1d8b5efb641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xib0000000000000000^899"CompileXIB MainWindow-iPad.xib    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/MainWindow-iPad.nib /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow-iPad.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk36"EE0E304E-0554-4165-B386-DA61F479F15A-
+
+CCompileXIB /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib
+s384808381.006626
+e384808408.876899
+r1
+xCompileXIB
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compiling /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib5bb103bdb5efb641^467be0d8b5efb641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib0000000000000000^884"CompileXIB MainWindow.xib    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/MainWindow.nib /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/MainWindow.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk36"DE8ED168-74DA-4DCA-AF6F-E15EAEA1CFCA-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/0.png Images/0.png
+s384808376.568562
+e384808377.814947
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/0.png
+xImages/0.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/0.png Images/0.png00a991b8b5efb641^be15d1b9b5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/0.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/0.png Images/0.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/0.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/0.png36"CBBACC45-D34D-47E5-B0D6-6E28862713C7-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/1.png Images/1.png
+s384808377.819973
+e384808377.963450
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/1.png
+xImages/1.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/1.png Images/1.pnga60ad2b9b5efb641^44a4f6b9b5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/1.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/1.png Images/1.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/1.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/1.png36"E86369F4-260A-4B19-B3FD-4D8B9685B859-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/10.png Images/10.png
+s384808378.945109
+e384808379.116683
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/10.png
+xImages/10.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"CopyPNGFile build/Release-iphoneos/PressurePaint.app/10.png Images/10.pngbc05f2bab5efb641^dd9446bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/10.png0000000000000000^652"CopyPNGFile build/Release-iphoneos/PressurePaint.app/10.png Images/10.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/10.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/10.png36"3A187A89-A34F-4170-8281-3F0895787B30-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/11.png Images/11.png
+s384808379.118040
+e384808379.232423
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/11.png
+xImages/11.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"CopyPNGFile build/Release-iphoneos/PressurePaint.app/11.png Images/11.png1a4d1ebbb5efb641^c39e46bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/11.png0000000000000000^652"CopyPNGFile build/Release-iphoneos/PressurePaint.app/11.png Images/11.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/11.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/11.png36"6FAACF4E-CDF9-4130-B508-020F89B420D1-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/12.png Images/12.png
+s384808379.118573
+e384808379.232208
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/12.png
+xImages/12.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"CopyPNGFile build/Release-iphoneos/PressurePaint.app/12.png Images/12.png8b711ebbb5efb641^e19b46bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/12.png0000000000000000^652"CopyPNGFile build/Release-iphoneos/PressurePaint.app/12.png Images/12.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/12.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/12.png36"14845BE4-C72E-4F58-8A5D-7217173F4946-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/13.png Images/13.png
+s384808379.233589
+e384808379.316264
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/13.png
+xImages/13.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"CopyPNGFile build/Release-iphoneos/PressurePaint.app/13.png Images/13.png58e43bbbb5efb641^dbf750bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/13.png0000000000000000^652"CopyPNGFile build/Release-iphoneos/PressurePaint.app/13.png Images/13.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/13.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/13.png36"154F381A-3602-4198-8947-ED35315DDF52-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/14.png Images/14.png
+s384808379.234128
+e384808379.309369
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/14.png
+xImages/14.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"CopyPNGFile build/Release-iphoneos/PressurePaint.app/14.png Images/14.png0c013cbbb5efb641^863b4fbbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/14.png0000000000000000^652"CopyPNGFile build/Release-iphoneos/PressurePaint.app/14.png Images/14.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/14.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/14.png36"06116AAC-DAEC-4437-9D70-00DEB796ACF5-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/15.png Images/15.png
+s384808379.310789
+e384808379.537035
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/15.png
+xImages/15.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"CopyPNGFile build/Release-iphoneos/PressurePaint.app/15.png Images/15.pngf0a64fbbb5efb641^a19f89bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/15.png0000000000000000^652"CopyPNGFile build/Release-iphoneos/PressurePaint.app/15.png Images/15.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/15.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/15.png36"A8C8DEB0-BFE7-464B-8950-5EFE89B33F9A-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/2.png Images/2.png
+s384808377.938213
+e384808378.057140
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/2.png
+xImages/2.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/2.png Images/2.pngb14ff0b9b5efb641^cf9f0ebab5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/2.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/2.png Images/2.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/2.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/2.png36"2435CB22-77BC-4315-99F4-BC8F76864EBE-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/3.png Images/3.png
+s384808377.965272
+e384808378.242215
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/3.png
+xImages/3.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/3.png Images/3.png1a35f7b9b5efb641^138146bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/3.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/3.png Images/3.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/3.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/3.png36"357EE148-83C8-49B4-8E41-731DD4D61B9F-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/4.png Images/4.png
+s384808378.058527
+e384808378.558199
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/4.png
+xImages/4.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/4.png Images/4.png1a160fbab5efb641^0e8646bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/4.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/4.png Images/4.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/4.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/4.png36"B7141352-270E-4B99-BFC8-A6E01E32D45B-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/5.png Images/5.png
+s384808378.243880
+e384808378.559124
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/5.png
+xImages/5.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/5.png Images/5.png7b883ebab5efb641^e48746bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/5.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/5.png Images/5.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/5.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/5.png36"546E2318-2DF1-4CD8-A040-A5C5CDB24652-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/6.png Images/6.png
+s384808378.559576
+e384808378.943192
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/6.png
+xImages/6.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/6.png Images/6.pngf3588fbab5efb641^bd8c46bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/6.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/6.png Images/6.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/6.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/6.png36"22E1C22B-FB99-4A39-BB35-372CFCF2F0DC-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/7.png Images/7.png
+s384808378.560268
+e384808378.783863
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/7.png
+xImages/7.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/7.png Images/7.png30818fbab5efb641^728a46bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/7.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/7.png Images/7.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/7.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/7.png36"C1A16184-CE99-41C7-AFCB-BBEB3C0E3B28-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/8.png Images/8.png
+s384808378.785237
+e384808378.943196
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/8.png
+xImages/8.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/8.png Images/8.pngef1dc9bab5efb641^618e46bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/8.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/8.png Images/8.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/8.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/8.png36"F74CCBD4-6D23-489D-A4C0-40CC0BCB05E7-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/9.png Images/9.png
+s384808378.944653
+e384808379.116775
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/9.png
+xImages/9.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"CopyPNGFile build/Release-iphoneos/PressurePaint.app/9.png Images/9.png4af1f1bab5efb641^249846bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/9.png0000000000000000^648"CopyPNGFile build/Release-iphoneos/PressurePaint.app/9.png Images/9.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Images/9.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/9.png36"3E95B972-E67E-486A-BB8F-4F8EEDFD2096-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png Default-568h@2x.png
+s384808408.883208
+e384808409.418161
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png
+xDefault-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png Default-568h@2x.png1138e2d8b5efb641^f60a6bd9b5efb641^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-568h@2x.png0000000000000000^698"CopyPNGFile "build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png" "Default-568h@2x.png"    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-568h@2x.png" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-568h@2x.png"36"504FE0E6-06DA-4B69-ADC8-0CFADDF14632-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png Default-Landscape~ipad.png
+s384808380.304468
+e384808380.566060
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png
+xDefault-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png Default-Landscape~ipad.pngd90a4ebcb5efb641^27fa90bcb5efb641^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-Landscape~ipad.png0000000000000000^726"CopyPNGFile "build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png" "Default-Landscape~ipad.png"    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-Landscape~ipad.png" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Landscape~ipad.png"36"20F8B475-9EA3-46B0-B144-1BBD033517AA-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png Default-Portrait~ipad.png
+s384808379.846048
+e384808380.303104
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png
+xDefault-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png Default-Portrait~ipad.pnga3afd8bbb5efb641^ec8a4dbcb5efb641^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-Portrait~ipad.png0000000000000000^722"CopyPNGFile "build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png" "Default-Portrait~ipad.png"    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default-Portrait~ipad.png" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default-Portrait~ipad.png"36"71E562E4-C710-4C65-99B8-BA23325D14E0-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default@2x.png Default@2x.png
+s384808380.409907
+e384808380.992085
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default@2x.png
+xDefault@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Default@2x.png Default@2x.png0b0c69bcb5efb641^c2f8fdbcb5efb641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default@2x.png0000000000000000^678"CopyPNGFile "build/Release-iphoneos/PressurePaint.app/Default@2x.png" "Default@2x.png"    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default@2x.png" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default@2x.png"36"DD5A1669-770A-4B93-AF96-C933F0D07DC3-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default~ipad.png Default~ipad.png
+s384808379.730944
+e384808380.408481
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default~ipad.png
+xDefault~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Default~ipad.png Default~ipad.pngdf36bbbbb5efb641^6ea468bcb5efb641^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default~ipad.png0000000000000000^686"CopyPNGFile "build/Release-iphoneos/PressurePaint.app/Default~ipad.png" "Default~ipad.png"    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Default~ipad.png" "/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Default~ipad.png"36"B39B736E-CB9E-40EB-B05C-DC8C4B5EDB69-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Particle.png Particle.png
+s384808376.567043
+e384808377.936742
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Particle.png
+xParticle.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Particle.png Particle.png187d91b8b5efb641^ddcdefb9b5efb641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Particle.png0000000000000000^662"CopyPNGFile build/Release-iphoneos/PressurePaint.app/Particle.png Particle.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Particle.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Particle.png36"0F6C477F-7FB5-489C-B8CB-58C785DE5461-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-114px.png icon-114px.png
+s384808379.538902
+e384808379.842213
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-114px.png
+xicon-114px.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"CopyPNGFile build/Release-iphoneos/PressurePaint.app/icon-114px.png icon-114px.pngd7128abbb5efb641^f29ad7bbb5efb641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-114px.png0000000000000000^670"CopyPNGFile build/Release-iphoneos/PressurePaint.app/icon-114px.png icon-114px.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-114px.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-114px.png36"6ED886CF-A0FD-4516-A9FC-E6C56500B0A2-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-57px.png icon-57px.png
+s384808379.317605
+e384808379.545327
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-57px.png
+xicon-57px.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"CopyPNGFile build/Release-iphoneos/PressurePaint.app/icon-57px.png icon-57px.png736851bbb5efb641^4a9a8bbbb5efb641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-57px.png0000000000000000^666"CopyPNGFile build/Release-iphoneos/PressurePaint.app/icon-57px.png icon-57px.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-57px.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-57px.png36"8011CE4D-9FB6-4266-9CBE-5428F81CEB13-
+
+CCopyPNGFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-72.png icon-72.png
+s384808379.546704
+e384808379.729631
+r1
+xCopyPNGFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-72.png
+xicon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CopyPNGFile build/Release-iphoneos/PressurePaint.app/icon-72.png icon-72.png800d8cbbb5efb641^e0d9babbb5efb641^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-72.png0000000000000000^658"CopyPNGFile build/Release-iphoneos/PressurePaint.app/icon-72.png icon-72.png    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/icon-72.png /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/icon-72.png36"6BA3881E-D9D0-4E4A-9C27-494511FA5BDB-
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist build/Release-iphoneos/PressurePaint.app/ResourceRules.plist
+s384808375.953503
+e384808376.341803
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+xbuild/Release-iphoneos/PressurePaint.app/ResourceRules.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Release-iphoneos/PressurePaint.app/ResourceRules.plist58e7f4b7b5efb641^f59c6cb8b5efb641^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/ResourceRules.plist000000000080d041^928"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist build/Release-iphoneos/PressurePaint.app/ResourceRules.plist    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app36"2CBE1C61-F41D-42C8-B3A1-CB8851089735-
+
+CCpResource Erase.caf build/Release-iphoneos/PressurePaint.app/Erase.caf
+s384808376.422135
+e384808376.564212
+r1
+xCpResource
+xErase.caf
+xbuild/Release-iphoneos/PressurePaint.app/Erase.caf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/Release-iphoneos/PressurePaint.app/Erase.caf4e5e6cb8b5efb641^9ab590b8b5efb641^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Erase.caf000000000080d041^763"CpResource Erase.caf build/Release-iphoneos/PressurePaint.app/Erase.caf    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Erase.caf /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app36"D778FA02-C1AC-4930-96E9-0E852B06EF48-
+
+CCpResource Select.caf build/Release-iphoneos/PressurePaint.app/Select.caf
+s384808376.421675
+e384808376.564733
+r1
+xCpResource
+xSelect.caf
+xbuild/Release-iphoneos/PressurePaint.app/Select.caf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/Release-iphoneos/PressurePaint.app/Select.caf61526cb8b5efb641^dcbd90b8b5efb641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Select.caf000000000080d041^766"CpResource Select.caf build/Release-iphoneos/PressurePaint.app/Select.caf    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Select.caf /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app36"670C973D-6A9C-4ED3-A44B-03CE7EE9632C-
+
+CCpResource iTunesArtwork build/Release-iphoneos/PressurePaint.app/iTunesArtwork
+s384808408.878367
+e384808408.881901
+r1
+xCpResource
+xiTunesArtwork
+xbuild/Release-iphoneos/PressurePaint.app/iTunesArtwork
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Release-iphoneos/PressurePaint.app/iTunesArtworkd2fde0d8b5efb641^f6d1e1d8b5efb641^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/iTunesArtwork000000000080d041^775"CpResource iTunesArtwork build/Release-iphoneos/PressurePaint.app/iTunesArtwork    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/iTunesArtwork /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app36"563353CA-8713-4FF3-8755-5A3E3E806BAD-
+
+CGenerateDSYMFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYM /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint
+s384808435.913006
+e384808437.336779
+r1
+xGenerateDSYMFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYM
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Generate /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYMedd3e9f3b5efb641^344756f5b5efb641^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYM000000000080d041^724"GenerateDSYMFile build/Release-iphoneos/PressurePaint.app.dSYM build/Release-iphoneos/PressurePaint.app/PressurePaint    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app.dSYM36"F00FC365-C351-4587-A00D-711D82EE0721-
+
+CLd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint normal armv7
+s384808423.609285
+e384808435.906099
+r1
+xLd
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint
+xnormal
+xarmv7
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Link /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint861f9ce7b5efb641^8106f7f3b5efb641^---0#0#0#--1291"Ld build/Release-iphoneos/PressurePaint.app/PressurePaint normal armv7    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -L/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos -filelist /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/Objects-normal/armv7/PressurePaint.LinkFileList -dead_strip -fobjc-link-runtime -miphoneos-version-min=5.0 -framework Foundation -framework UIKit -framework CoreGraphics -framework OpenGLES -framework QuartzCore -framework AudioToolbox -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PressurePaint36"A6A2F188-0A43-41DE-89B9-ACBCFB137785-
+
+CProcessInfoPlistFile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Info.plist PressurePaint-Info.plist
+s384808375.954165
+e384808376.411702
+r1
+xProcessInfoPlistFile
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Info.plist
+xPressurePaint-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Process PressurePaint-Info.plistfbe8f4b7b5efb641^6aa16cb8b5efb641^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/PressurePaint-Info.plist0000000000000000^874"ProcessInfoPlistFile build/Release-iphoneos/PressurePaint.app/Info.plist PressurePaint-Info.plist    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility PressurePaint-Info.plist -genpkginfo /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/ResourceRules.plist -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/Info.plist36"51C104AB-76D1-4C23-A647-828E51995AB1-
+
+CProcessPCH /Users/option8/Library/Developer/Xcode/DerivedData/PressurePaint-fbkzacsdqrdusihgqqmvvcerjpic/Index/PrecompiledHeaders/Prefix-chvanmvudvclmtchkpjitliwxgyq_ast/Prefix.pch.pth Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.pth Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s384808409.426811
+e384808416.632220
+r1
+xProcessPCH
+x/var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.pth
+xPrefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection21"Precompile Prefix.pchf5806dd9b5efb641^00acaae0b5efb641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Prefix.pch0000000000000000^3609"ProcessPCH /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.pth Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-generated-files.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-own-target-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-all-target-headers.hmap -iquote /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint-project-headers.hmap -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources/armv7 -I/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/DerivedSources -Wall -F/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos --serialize-diagnostics /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.dia -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/Prefix.pch -o /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/68/5t_m7kn08xj1nb006s6b2rrh0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Prefix-dxcnbpgwlodpdqbigluwdmoefpao/Prefix.pch.d36"9A18D553-EE88-4600-9573-1592909308FE-
+
+CProcessProductPackaging "/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision
+s384808437.610109
+e384808438.242361
+r1
+xProcessProductPackaging
+x/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection202"ProcessProductPackaging "/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision" build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision8e579cf5b5efb641^a06b3ff6b5efb641^---0#0#0#-19%DVTDocumentLocation2@150"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision0000000000000000^754"ProcessProductPackaging "/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision" build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility "/Users/option8/Library/MobileDevice/Provisioning Profiles/8D386E22-B674-4D97-93E2-E04C28DF7FB5.mobileprovision" -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision36"F86C361C-1715-4081-A24D-16A95109DF73-
+
+CProcessProductPackaging "/Users/option8/Library/MobileDevice/Provisioning Profiles/A4618A14-79B5-4D07-9871-8DE6D5DEE086.mobileprovision" /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app/embedded.mobileprovision
+r0
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent
+s384808438.569099
+e384808439.247849
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection227"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent6f2a96f6b5efb641^a6813ff7b5efb641^---0#0#0#-19%DVTDocumentLocation2@167"file://localhost/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent000000000080d041^830"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist -entitlements -format xml -o /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/PressurePaint.build/Release-iphoneos/PressurePaint.build/PressurePaint.xcent36"B69C8DC9-6387-4449-B806-39307FAEC79C-
+
+CTouch /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+s384808438.251487
+e384808438.560335
+r1
+xTouch
+x/Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Touch /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app297a40f6b5efb641^8baa8ff6b5efb641^---0#0#0#--443"Touch build/Release-iphoneos/PressurePaint.app    cd /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/option8/Dropbox/Projects/pressurepen/GITHUB/PressurePaint/iOS/build/Release-iphoneos/PressurePaint.app36"6A4D04A5-C2D0-44F0-9B41-47680885EF5C-
+
