@@ -200,23 +200,16 @@ static void HandleInputBuffer(
     AudioSessionInitialize(NULL, NULL, NULL, NULL);
     AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &state);
     
-<<<<<<< HEAD
     if((NSString *)state == @"MicrophoneWired") {
-=======
-    return YES; // Always show connected
-    
-/*    if((NSString *)state == @"MicrophoneWired") {
->>>>>>> updated build info for new xcode.
         return YES;
     } else {
         return NO;
-    }*/
+    }
 }
 
 -(void) generateTone:(AudioQueueBuffer *)buffer
 {
-  
-  SInt16 *caOutBuffer = (SInt16*)buffer->mAudioData;
+    SInt16 *caOutBuffer = (SInt16*)buffer->mAudioData;
     
     buffer->mAudioDataByteSize = kBufferSizeFrames * outputFormat.mBytesPerFrame;
     
@@ -231,7 +224,6 @@ static void HandleInputBuffer(
     }
     
     phase = fmodf(phase, 2 * M_PI);
-  
 }
 
 - (void) startGeneratingTone
